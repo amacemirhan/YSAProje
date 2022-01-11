@@ -144,10 +144,7 @@ def take_photo():
         from keras.models import load_model
         saved_model = load_model("vgg16_1.h5")
         output = saved_model.predict(img)
-        if output[0][0] > output[0][1]:
-            print("cat")
-        else:
-            print('dog')
+        array2dir(output)
             
         time.sleep(0.5)    
         
